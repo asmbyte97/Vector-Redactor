@@ -38,7 +38,7 @@ object FormPaint: TFormPaint
     ClientWidth = 575
     TabOrder = 1
     object Sizechange: TComboBox
-      Left = 136
+      Left = 8
       Height = 28
       Top = 32
       Width = 100
@@ -62,7 +62,7 @@ object FormPaint: TFormPaint
       Text = '2'
     end
     object Size: TLabel
-      Left = 136
+      Left = 8
       Height = 20
       Top = 8
       Width = 100
@@ -73,7 +73,7 @@ object FormPaint: TFormPaint
       Transparent = False
     end
     object BtnClear: TButton
-      Left = 256
+      Left = 288
       Height = 28
       Top = 16
       Width = 115

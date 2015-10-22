@@ -8,9 +8,9 @@ uses
 type
   TTool = Class
     function CreateBtn(i:integer;Sender:TObject):TBitBtn;
-    procedure MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer); virtual;
-    procedure MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer); virtual;
-    procedure MouseMove(Sender: TObject;Shift: TShiftState; X, Y: Integer); virtual;
+    procedure MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer); virtual; abstract;
+    procedure MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer); virtual; abstract;
+    procedure MouseMove(Sender: TObject;Shift: TShiftState; X, Y: Integer); virtual; abstract;
   end;
   TToolClass = class of TTool;
   TToolPen = Class(TTool)
@@ -69,18 +69,6 @@ begin
     Tag:=i;
     Glyph.LoadFromFile(inttostr(i)+'.bmp');
   end;
-end;
-Procedure TTool.MouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
-begin
-end;
-Procedure TTool.MouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Integer);
-begin
-end;
-Procedure TTool.MouseMove(Sender: TObject;Shift: TShiftState;
-  X, Y: Integer);
-begin
 end;
 
 Procedure TToolPen.MouseDown(Sender: TObject; Button: TMouseButton;
