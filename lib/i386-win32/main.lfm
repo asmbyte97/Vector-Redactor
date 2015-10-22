@@ -1,0 +1,100 @@
+object FormPaint: TFormPaint
+  Left = 1286
+  Height = 341
+  Top = 168
+  Width = 575
+  Caption = 'Paint'
+  ClientHeight = 316
+  ClientWidth = 575
+  KeyPreview = True
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  LCLVersion = '1.4.2.0'
+  object PaintBox: TPaintBox
+    Left = 134
+    Height = 249
+    Top = 0
+    Width = 441
+    Align = alClient
+    OnPaint = PaintBoxPaint
+  end
+  object Panel: TPanel
+    Left = 0
+    Height = 249
+    Top = 0
+    Width = 134
+    Align = alLeft
+    TabOrder = 0
+  end
+  object Settings: TPanel
+    Left = 0
+    Height = 67
+    Top = 249
+    Width = 575
+    Align = alBottom
+    ClientHeight = 67
+    ClientWidth = 575
+    TabOrder = 1
+    object Sizechange: TComboBox
+      Left = 136
+      Height = 28
+      Top = 32
+      Width = 100
+      ItemHeight = 20
+      ItemIndex = 1
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8'
+        '9'
+        '10'
+      )
+      OnSelect = SizechangeSelect
+      Style = csDropDownList
+      TabOrder = 0
+      Text = '2'
+    end
+    object Size: TLabel
+      Left = 136
+      Height = 20
+      Top = 8
+      Width = 100
+      AutoSize = False
+      Caption = 'Толщина '
+      Color = clInfoBk
+      ParentColor = False
+      Transparent = False
+    end
+    object BtnClear: TButton
+      Left = 256
+      Height = 28
+      Top = 16
+      Width = 115
+      Caption = 'Очистить экран'
+      OnClick = BtnClearClick
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 840
+    top = 84
+    object MenuFail: TMenuItem
+      Caption = 'Файл'
+      object MenuExit: TMenuItem
+        Caption = 'Выход'
+        OnClick = MenuExitClick
+      end
+    end
+    object MenuAbout: TMenuItem
+      Caption = 'О программе'
+      OnClick = MenuAboutClick
+    end
+  end
+end
